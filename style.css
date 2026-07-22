@@ -1,0 +1,19 @@
+/* style.css */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
+  background: #f4f4f4;
+}
+
+h1 {
+  color: #0066cc;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #0066cc;
+  color: white;
+  border-radius: 8px;
+}
