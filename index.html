@@ -1,181 +1,228 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi web personal</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi página personal</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <style>
+        /* RESET */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #f8f8f8, #ececec);
-      color: #1f1f1f;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 30px;
-    }
+        /* BODY */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f7f7f7, #eaeaea);
+            color: #1a1a1a;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
 
-    .card {
-      max-width: 800px;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(0, 0, 0, 0.08);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      backdrop-filter: blur(8px);
-    }
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 40px;
+            align-items: center;
+        }
 
-    .tag {
-      display: inline-block;
-      font-size: 14px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 18px;
-      color: #666;
-    }
+        /* SELECTOR DE IDIOMA */
+        .language-selector {
+            text-align: right;
+            margin-bottom: 20px;
+        }
 
-    h1 {
-      font-size: 48px;
-      margin-bottom: 12px;
-    }
+        .language-selector select {
+            padding: 8px 14px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            background: white;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-    .subtitle {
-      font-size: 20px;
-      color: #555;
-      margin-bottom: 20px;
-    }
+        .language-selector select:hover {
+            border-color: #888;
+        }
 
-    .description {
-      font-size: 18px;
-      line-height: 1.7;
-      margin-bottom: 30px;
-      color: #333;
-    }
+        /* FOTO */
+        .photo-box {
+            text-align: center;
+        }
 
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 30px;
-    }
+        .photo-box img {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+            margin: 0 auto 20px;
+        }
 
-    .btn {
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 12px;
-      transition: 0.3s ease;
-      font-weight: bold;
-    }
+        .photo-box p {
+            color: #666;
+            font-size: 15px;
+        }
 
-    .btn-primary {
-      background: #111;
-      color: white;
-    }
+        /* CONTENIDO */
+        .content .tag {
+            display: inline-block;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #777;
+            margin-bottom: 14px;
+        }
 
-    .btn-primary:hover {
-      background: #333;
-    }
+        .content h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
 
-    .btn-secondary {
-      border: 1px solid #bbb;
-      color: #111;
-      background: white;
-    }
+        .content h2 {
+            font-size: 22px;
+            color: #555;
+            margin-bottom: 20px;
+            font-weight: normal;
+        }
 
-    .btn-secondary:hover {
-      background: #f3f3f3;
-    }
+        .content .description {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+            color: #333;
+        }
 
-    .info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
+        /* BOTONES */
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
 
-    .info-box {
-      background: #fafafa;
-      border-radius: 14px;
-      padding: 18px;
-      border: 1px solid #eee;
-    }
+        .btn {
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
 
-    .info-box h3 {
-      font-size: 14px;
-      color: #777;
-      margin-bottom: 8px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+        .btn-dark {
+            background: #111;
+            color: white;
+        }
 
-    .info-box p {
-      font-size: 16px;
-      color: #222;
-    }
+        .btn-dark:hover {
+            background: #333;
+        }
 
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 34px;
-      }
+        .btn-light {
+            background: white;
+            color: #111;
+            border: 1px solid #ccc;
+        }
 
-      .subtitle {
-        font-size: 18px;
-      }
+        .btn-light:hover {
+            background: #f3f3f3;
+        }
 
-      .description {
-        font-size: 16px;
-      }
+        /* RESPONSIVE */
+        @media (max-width: 850px) {
+            .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
 
-      .card {
-        padding: 25px;
-      }
-    }
-  </style>
+            .language-selector {
+                text-align: center;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .content h1 {
+                font-size: 36px;
+            }
+
+            .content h2 {
+                font-size: 20px;
+            }
+
+            .content .description {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <main class="card">
-    <span class="tag">Mi espacio personal</span>
 
-    <h1>Tu Nombre Aquí</h1>
+    <main class="container">
 
-    <p class="subtitle">Aprendiendo desarrollo web desde cero</p>
+        <!-- SELECTOR DE IDIOMA -->
+        <div class="language-selector">
+            <select id="language" onchange="changeLanguage()">
+                <option value="es">🇪🇸 Español</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="tr">🇹🇷 Türkçe</option>
+            </select>
+        </div>
 
-    <p class="description">
-      Hola, soy una persona que está aprendiendo a crear páginas web con HTML, CSS,
-      JavaScript y VS Code. Este es mi primer sitio personal, donde iré mostrando
-      quién soy, lo que estoy aprendiendo y mis próximos proyectos.
-    </p>
+        <!-- SECCIÓN FOTO -->
+        <section class="photo-box">
+            <img src="images/Photo_Linkedin.jpeg" alt="Foto personal de Jasmine Mae Rimando Cabigas">
+            <p>Estudiante en la Universidad de Las Palmas de Gran Canaria, Ingeniería Biomédica</p>
+        </section>
 
-    <div class="buttons">
-      <a href="#" class="btn btn-primary">Ver proyectos</a>
-      <a href="#" class="btn btn-secondary">Contactar</a>
-    </div>
+        <!-- SECCIÓN CONTENIDO -->
+        <section class="content">
+            <span class="tag">Bienvenido a mi web</span>
+            <h1>Jasmine Mae Rimando Cabigas</h1>
+            <h2>Aprendiendo desarrollo web + pequeños proyectos</h2>
 
-    <section class="info">
-      <article class="info-box">
-        <h3>Ubicación</h3>
-        <p>Las Palmas de Gran Canaria</p>
-      </article>
+            <p class="description">
+                Hola, soy Jasmine y estoy aprendiendo a crear páginas web desde cero.
+                Me interesa entender cómo funcionan HTML, CSS, JavaScript, Git y GitHub
+                para construir proyectos propios y publicarlos en internet.
+            </p>
 
-      <article class="info-box">
-        <h3>Objetivo</h3>
-        <p>Aprender a crear y publicar mi primera web</p>
-      </article>
+            <p class="description">
+                En esta web quiero mostrar un poco sobre mí, contactos, lo que estoy aprendiendo
+                y los proyectos que iré creando poco a poco mientras practico con VS Code.
+            </p>
 
-      <article class="info-box">
-        <h3>Herramientas</h3>
-        <p>VS Code, HTML, CSS, JavaScript, Git</p>
-      </article>
-    </section>
-  </main>
+            <div class="buttons">
+                <a href="#" class="btn btn-dark">Ver proyectos</a>
+                <a href="#" class="btn btn-light">Contacto</a>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById('language').value;
+            alert('Idioma seleccionado: ' + lang);
+            // Aquí puedes agregar la lógica para cambiar el contenido según el idioma
+        }
+    </script>
+
 </body>
 </html>
