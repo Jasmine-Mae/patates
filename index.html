@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -28,11 +27,9 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
-
 
         body {
             font-family: "Inter", sans-serif;
@@ -40,7 +37,6 @@
             color: #1d1d1f;
             min-height: 100vh;
         }
-
 
         /* =========================
            NAVBAR
@@ -52,18 +48,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             position: sticky;
             top: 0;
             z-index: 100;
-
             background: rgba(247, 245, 242, 0.9);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(0, 0, 0, 0.06);
         }
-
-
-        /* LOGO */
 
         .logo {
             font-family: "Space Grotesk", sans-serif;
@@ -72,46 +63,35 @@
             letter-spacing: -0.5px;
         }
 
-
-        /* NAV LINKS */
-
         .nav-links {
             display: flex;
             align-items: center;
             gap: 35px;
         }
 
-
         .nav-links a {
             text-decoration: none;
             color: #1d1d1f;
             font-size: 14px;
             font-weight: 500;
-
             position: relative;
             transition: 0.3s ease;
         }
-
 
         .nav-links a::after {
             content: "";
             position: absolute;
             left: 0;
             bottom: -5px;
-
             width: 0;
             height: 1px;
-
             background: #1d1d1f;
-
             transition: 0.3s ease;
         }
-
 
         .nav-links a:hover::after {
             width: 100%;
         }
-
 
         /* =========================
            LANGUAGE
@@ -119,20 +99,14 @@
 
         .language-selector select {
             padding: 8px 12px;
-
             border: 1px solid #d6d3cf;
             border-radius: 20px;
-
             background: transparent;
-
             font-family: "Inter", sans-serif;
             font-size: 13px;
-
             cursor: pointer;
-
             outline: none;
         }
-
 
         /* =========================
            HERO
@@ -141,19 +115,13 @@
         .hero {
             max-width: 1200px;
             min-height: calc(100vh - 80px);
-
             margin: 0 auto;
-
             padding: 80px 6%;
-
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
-
             gap: 80px;
-
             align-items: center;
         }
-
 
         /* =========================
            HERO TEXT
@@ -163,74 +131,52 @@
             max-width: 650px;
         }
 
-
         .small-title {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-
             font-size: 12px;
             font-weight: 600;
-
             letter-spacing: 2px;
             text-transform: uppercase;
-
             color: #65756b;
-
             margin-bottom: 25px;
         }
-
 
         .small-title::before {
             content: "";
-
             width: 30px;
             height: 1px;
-
             background: #65756b;
         }
 
-
         .hero h1 {
             font-family: "Space Grotesk", sans-serif;
-
             font-size: clamp(55px, 7vw, 95px);
-
             line-height: 0.95;
             letter-spacing: -5px;
-
             margin-bottom: 25px;
         }
-
 
         .hero h1 span {
             display: block;
         }
 
-
         .hero-subtitle {
             font-family: "Space Grotesk", sans-serif;
-
             font-size: 22px;
             font-weight: 500;
-
             color: #555;
-
             margin-bottom: 20px;
         }
 
-
         .description {
             max-width: 580px;
-
             font-size: 16px;
             line-height: 1.8;
-
             color: #666;
-
             margin-bottom: 30px;
         }
-
 
         /* =========================
            BIOMEDICAL TAG
@@ -238,20 +184,14 @@
 
         .bio-tag {
             display: inline-block;
-
             padding: 8px 14px;
-
             border: 1px solid #d5dcd7;
             border-radius: 30px;
-
             color: #65756b;
-
             font-size: 12px;
             font-weight: 500;
-
             margin-bottom: 25px;
         }
-
 
         /* =========================
            BUTTONS
@@ -263,51 +203,40 @@
             gap: 12px;
         }
 
-
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 10px;
-
             padding: 13px 21px;
-
             border-radius: 30px;
-
             text-decoration: none;
-
             font-size: 14px;
             font-weight: 600;
-
             transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
         }
-
 
         .btn-primary {
             background: #1d1d1f;
             color: white;
         }
 
-
         .btn-primary:hover {
             transform: translateY(-3px);
             background: #333;
         }
 
-
         .btn-secondary {
             background: transparent;
-
             color: #1d1d1f;
-
             border: 1px solid #cfcac5;
         }
-
 
         .btn-secondary:hover {
             transform: translateY(-3px);
             background: #ffffff;
         }
-
 
         /* =========================
            PHOTO
@@ -315,33 +244,23 @@
 
         .hero-photo {
             position: relative;
-
             display: flex;
             justify-content: center;
         }
 
-
         .photo-frame {
             width: min(100%, 430px);
-
             position: relative;
         }
-
 
         .photo-frame img {
             width: 100%;
             aspect-ratio: 4 / 5;
-
             object-fit: cover;
-
             border-radius: 30px;
-
             display: block;
-
-            box-shadow:
-                0 25px 60px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
         }
-
 
         /* =========================
            PHOTO DECORATION
@@ -349,50 +268,33 @@
 
         .photo-number {
             position: absolute;
-
             bottom: -20px;
             left: -25px;
-
             width: 75px;
             height: 75px;
-
             border-radius: 50%;
-
             background: #dce5df;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             font-family: "Space Grotesk", sans-serif;
-
             font-size: 20px;
             font-weight: 600;
-
             color: #46564d;
         }
 
-
         .photo-label {
             position: absolute;
-
             top: 25px;
             right: -25px;
-
             background: white;
-
             padding: 10px 15px;
-
             border-radius: 20px;
-
             font-size: 11px;
             font-weight: 600;
-
             letter-spacing: 1px;
-
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         }
-
 
         /* =========================
            DECORATIVE LINE
@@ -400,21 +302,16 @@
 
         .wave {
             position: absolute;
-
             bottom: -45px;
             right: 0;
-
             width: 180px;
-
             opacity: 0.45;
         }
-
 
         .wave svg {
             width: 100%;
             height: auto;
         }
-
 
         /* =========================
            NEXT SECTION
@@ -422,44 +319,30 @@
 
         .next-section {
             max-width: 1200px;
-
             margin: 0 auto;
-
             padding: 100px 6%;
-
             border-top: 1px solid #ddd8d3;
         }
-
 
         .section-number {
             font-size: 12px;
             letter-spacing: 2px;
-
             color: #777;
-
             margin-bottom: 20px;
         }
-
 
         .next-section h2 {
             font-family: "Space Grotesk", sans-serif;
-
             font-size: clamp(40px, 6vw, 70px);
-
             letter-spacing: -3px;
-
             margin-bottom: 20px;
         }
 
-
         .next-section p {
             max-width: 650px;
-
             color: #666;
-
             line-height: 1.8;
         }
-
 
         /* =========================
            RESPONSIVE
@@ -471,69 +354,54 @@
                 padding: 20px 5%;
             }
 
-
             .nav-links {
                 gap: 18px;
             }
 
-
             .hero {
                 grid-template-columns: 1fr;
-
                 padding-top: 60px;
-
                 gap: 60px;
-
                 text-align: center;
             }
-
 
             .hero-text {
                 margin: 0 auto;
             }
 
-
             .small-title {
                 justify-content: center;
             }
 
-
             .bio-tag {
                 margin-bottom: 20px;
             }
-
 
             .description {
                 margin-left: auto;
                 margin-right: auto;
             }
 
-
             .buttons {
                 justify-content: center;
             }
-
 
             .hero-photo {
                 order: -1;
             }
 
-
             .photo-frame {
                 max-width: 350px;
             }
-
 
             .photo-number {
                 left: -10px;
             }
 
-
             .photo-label {
                 right: -10px;
             }
         }
-
 
         @media (max-width: 650px) {
 
@@ -542,62 +410,47 @@
                 gap: 15px;
             }
 
-
             .nav-links {
                 order: 3;
-
                 width: 100%;
-
                 justify-content: center;
-
                 padding-top: 5px;
             }
-
 
             .language-selector {
                 margin-left: auto;
             }
 
-
             .hero {
                 padding: 45px 6% 80px;
             }
 
-
             .hero h1 {
                 font-size: clamp(48px, 15vw, 70px);
-
                 letter-spacing: -3px;
             }
-
 
             .hero-subtitle {
                 font-size: 19px;
             }
 
-
             .description {
                 font-size: 15px;
             }
-
 
             .photo-frame {
                 max-width: 290px;
             }
 
-
             .photo-number {
                 width: 60px;
                 height: 60px;
-
                 font-size: 16px;
             }
-
 
             .photo-label {
                 font-size: 9px;
             }
-
 
             .next-section {
                 padding: 80px 6%;
@@ -607,9 +460,7 @@
     </style>
 </head>
 
-
 <body>
-
 
     <!-- =========================
          NAVIGATION
@@ -621,27 +472,25 @@
             JASMINE
         </div>
 
-
         <nav class="nav-links">
 
-            <a href="#about">
-                About
+            <a href="#about" data-i18n="nav_about">
+                Sobre mí
             </a>
 
-            <a href="#projects">
-                Projects
+            <a href="#projects" data-i18n="nav_projects">
+                Proyectos
             </a>
 
-            <a href="#contact">
-                Contact
+            <a href="#contact" data-i18n="nav_contact">
+                Contacto
             </a>
 
         </nav>
 
-
         <div class="language-selector">
 
-            <select id="language">
+            <select id="language" aria-label="Seleccionar idioma">
 
                 <option value="es">
                     🇪🇸 ES
@@ -665,8 +514,6 @@
 
     </header>
 
-
-
     <!-- =========================
          HERO / HOME
     ========================= -->
@@ -675,59 +522,54 @@
 
         <section class="hero">
 
-
             <!-- TEXTO -->
 
             <div class="hero-text">
 
-                <div class="small-title">
-                    Welcome to my website
+                <div class="small-title" data-i18n="welcome">
+                    Bienvenido a mi página web
                 </div>
 
-
-                <div class="bio-tag">
-                    BIOMEDICAL ENGINEERING · ULPGC
+                <div class="bio-tag" data-i18n="bio_tag">
+                    GRADO EN INGENIERÍA BIOMÉDICA · ULPGC
                 </div>
-
 
                 <h1>
-                    <span>Jasmine</span>
-                    <span>Mae.</span>
+                    <span>Jasmine Mae Rimando Cabigas</span>
                 </h1>
 
-
-                <h2 class="hero-subtitle">
-                    Biomedical Engineering + Technology
+                <h2 class="hero-subtitle" data-i18n="hero_subtitle">
+                    Ingeniería Biomédica + Tecnología
                 </h2>
 
-
-                <p class="description">
-
-                    Hola, soy Jasmine y estoy aprendiendo a crear
-                    páginas web desde cero.
-
-                    Me interesa la tecnología, la ingeniería biomédica
-                    y aprender cómo funcionan HTML, CSS, JavaScript,
+                <p class="description" data-i18n="hero_description">
+                    Hola, soy Jasmine y estoy aprendiendo a crear páginas web
+                    desde cero. Me interesa la tecnología, la ingeniería
+                    biomédica y aprender cómo funcionan HTML, CSS, JavaScript,
                     Git y GitHub para construir mis propios proyectos.
-
                 </p>
-
 
                 <div class="buttons">
 
-                    <a href="#projects" class="btn btn-primary">
+                    <a
+                        href="#projects"
+                        class="btn btn-primary"
+                        data-i18n="projects_button"
+                    >
                         Ver proyectos →
                     </a>
 
-                    <a href="#about" class="btn btn-secondary">
+                    <a
+                        href="#about"
+                        class="btn btn-secondary"
+                        data-i18n="about_button"
+                    >
                         Sobre mí
                     </a>
 
                 </div>
 
             </div>
-
-
 
             <!-- FOTO -->
 
@@ -740,16 +582,13 @@
                         alt="Foto personal de Jasmine Mae Rimando Cabigas"
                     >
 
-
                     <div class="photo-number">
                         01
                     </div>
 
-
                     <div class="photo-label">
                         ENGINEERING · TECH
                     </div>
-
 
                     <!-- DECORACIÓN TIPO ECG -->
 
@@ -788,114 +627,440 @@
 
         </section>
 
-
-
         <!-- =========================
-             ABOUT - TEMPORAL
+             ABOUT
         ========================= -->
 
         <section id="about" class="next-section">
 
-            <div class="section-number">
-                01 — ABOUT ME
+            <div class="section-number" data-i18n="about_number">
+                01 — SOBRE MÍ
             </div>
 
-            <h2>
-                A little bit<br>
-                about me.
+            <h2 data-i18n="about_title">
+                Un poco<br>
+                sobre mí.
             </h2>
 
-            <p>
-                Estudiante de Ingeniería Biomédica en la Universidad
-                de Las Palmas de Gran Canaria. Esta página será mi
-                espacio para mostrar lo que estoy aprendiendo,
-                mis proyectos y las cosas que voy creando.
+            <p data-i18n="about_description">
+                Estudiante de Ingeniería Biomédica en la Universidad de
+                Las Palmas de Gran Canaria. Esta página será mi espacio
+                para mostrar lo que estoy aprendiendo, mis proyectos y
+                las cosas que voy creando.
             </p>
 
         </section>
 
-
-
         <!-- =========================
-             PROJECTS - TEMPORAL
+             PROJECTS
         ========================= -->
 
         <section id="projects" class="next-section">
 
-            <div class="section-number">
-                02 — PROJECTS
+            <div class="section-number" data-i18n="projects_number">
+                02 — PROYECTOS
             </div>
 
-            <h2>
-                Things I'm<br>
-                building.
+            <h2 data-i18n="projects_title">
+                Cosas que estoy<br>
+                construyendo.
             </h2>
 
-            <p>
-                Próximamente podrás encontrar aquí mis proyectos
-                de programación, ingeniería biomédica y otros
-                experimentos que vaya desarrollando.
+            <p data-i18n="projects_description">
+                Próximamente podrás encontrar aquí mis proyectos de
+                programación, ingeniería biomédica y otros experimentos
+                que vaya desarrollando. (SIN ESPECIFICAR)
             </p>
 
         </section>
 
-
-
         <!-- =========================
-             CONTACT - TEMPORAL
+             CONTACT
         ========================= -->
 
         <section id="contact" class="next-section">
 
-            <div class="section-number">
-                03 — CONTACT
+            <div class="section-number" data-i18n="contact_number">
+                03 — CONTACTO
             </div>
 
-            <h2>
-                Let's connect.
+            <h2 data-i18n="contact_title">
+                Conectemos.
             </h2>
 
-            <p>
-                Próximamente podrás encontrar aquí mis redes,
-                GitHub, LinkedIn y otras formas de contacto.
+            <p data-i18n="contact_description">
+                Próximamente podrás encontrar aquí mis redes, GitHub,
+                LinkedIn y otras formas de contacto.
             </p>
 
         </section>
 
     </main>
 
-
-
     <!-- =========================
          JAVASCRIPT
+         SISTEMA DE TRADUCCIÓN
     ========================= -->
 
     <script>
 
+        /* =========================
+           TRADUCCIONES
+        ========================= */
+
+        const translations = {
+
+            /* =====================
+               ESPAÑOL
+            ===================== */
+
+            es: {
+
+                welcome:
+                    "Bienvenido a mi página web",
+
+                bio_tag:
+                    "INGENIERÍA BIOMÉDICA · ULPGC",
+
+                nav_about:
+                    "Sobre mí",
+
+                nav_projects:
+                    "Proyectos",
+
+                nav_contact:
+                    "Contacto",
+
+                hero_subtitle:
+                    "Ingeniería Biomédica + Tecnología",
+
+                hero_description:
+                    "Hola, soy Jasmine y estoy aprendiendo a crear páginas web desde cero. Me interesa la tecnología, la ingeniería biomédica y aprender cómo funcionan HTML, CSS, JavaScript, Git y GitHub para construir mis propios proyectos.",
+
+                projects_button:
+                    "Ver proyectos →",
+
+                about_button:
+                    "Sobre mí",
+
+                about_number:
+                    "01 — SOBRE MÍ",
+
+                about_title:
+                    "Un poco<br>sobre mí.",
+
+                about_description:
+                    "Estudiante de Ingeniería Biomédica en la Universidad de Las Palmas de Gran Canaria. Esta página será mi espacio para mostrar lo que estoy aprendiendo, mis proyectos y las cosas que voy creando.",
+
+                projects_number:
+                    "02 — PROYECTOS",
+
+                projects_title:
+                    "Cosas que estoy<br>construyendo.",
+
+                projects_description:
+                    "Próximamente podrás encontrar aquí mis proyectos de programación, ingeniería biomédica y otros experimentos que vaya desarrollando.",
+
+                contact_number:
+                    "03 — CONTACTO",
+
+                contact_title:
+                    "Conectemos.",
+
+                contact_description:
+                    "Próximamente podrás encontrar aquí mis redes, GitHub, LinkedIn y otras formas de contacto."
+
+            },
+
+            /* =====================
+               ENGLISH
+            ===================== */
+
+            en: {
+
+                welcome:
+                    "Welcome to my website",
+
+                bio_tag:
+                    "BIOMEDICAL ENGINEERING · ULPGC",
+
+                nav_about:
+                    "About",
+
+                nav_projects:
+                    "Projects",
+
+                nav_contact:
+                    "Contact",
+
+                hero_subtitle:
+                    "Biomedical Engineering + Technology",
+
+                hero_description:
+                    "Hi, I'm Jasmine and I'm learning how to create websites from scratch. I'm interested in technology, biomedical engineering, and learning how HTML, CSS, JavaScript, Git and GitHub work to build my own projects.",
+
+                projects_button:
+                    "View projects →",
+
+                about_button:
+                    "About me",
+
+                about_number:
+                    "01 — ABOUT ME",
+
+                about_title:
+                    "A little bit<br>about me.",
+
+                about_description:
+                    "Biomedical Engineering student at the University of Las Palmas de Gran Canaria. This website will be my space to showcase what I'm learning, my projects and the things I create.",
+
+                projects_number:
+                    "02 — PROJECTS",
+
+                projects_title:
+                    "Things I'm<br>building.",
+
+                projects_description:
+                    "Soon you will be able to find my programming, biomedical engineering and other experimental projects here.",
+
+                contact_number:
+                    "03 — CONTACT",
+
+                contact_title:
+                    "Let's connect.",
+
+                contact_description:
+                    "Soon you will be able to find my social media, GitHub, LinkedIn and other ways to contact me here."
+
+            },
+
+            /* =====================
+               FRANÇAIS
+            ===================== */
+
+            fr: {
+
+                welcome:
+                    "Bienvenue sur mon site",
+
+                bio_tag:
+                    "GÉNIE BIOMÉDICAL · ULPGC",
+
+                nav_about:
+                    "À propos",
+
+                nav_projects:
+                    "Projets",
+
+                nav_contact:
+                    "Contact",
+
+                hero_subtitle:
+                    "Génie biomédical + Technologie",
+
+                hero_description:
+                    "Bonjour, je suis Jasmine et j'apprends à créer des sites web à partir de zéro. Je m'intéresse à la technologie, au génie biomédical et à la manière dont HTML, CSS, JavaScript, Git et GitHub fonctionnent pour créer mes propres projets.",
+
+                projects_button:
+                    "Voir les projets →",
+
+                about_button:
+                    "À propos de moi",
+
+                about_number:
+                    "01 — À PROPOS",
+
+                about_title:
+                    "Un peu<br>à propos de moi.",
+
+                about_description:
+                    "Étudiante en génie biomédical à l'Université de Las Palmas de Gran Canaria. Ce site sera mon espace pour présenter ce que j'apprends, mes projets et les choses que je crée.",
+
+                projects_number:
+                    "02 — PROJETS",
+
+                projects_title:
+                    "Les choses que<br>je construis.",
+
+                projects_description:
+                    "Vous pourrez bientôt retrouver ici mes projets de programmation, de génie biomédical et d'autres expériences que je développerai.",
+
+                contact_number:
+                    "03 — CONTACT",
+
+                contact_title:
+                    "Restons en contact.",
+
+                contact_description:
+                    "Vous pourrez bientôt retrouver ici mes réseaux sociaux, GitHub, LinkedIn et d'autres moyens de me contacter."
+
+            },
+
+            /* =====================
+               TÜRKÇE
+            ===================== */
+
+            tr: {
+
+                welcome:
+                    "Web siteme hoş geldiniz",
+
+                bio_tag:
+                    "BİYOMEDİKAL MÜHENDİSLİĞİ · ULPGC",
+
+                nav_about:
+                    "Hakkımda",
+
+                nav_projects:
+                    "Projeler",
+
+                nav_contact:
+                    "İletişim",
+
+                hero_subtitle:
+                    "Biyomedikal Mühendisliği + Teknoloji",
+
+                hero_description:
+                    "Merhaba, ben Jasmine. Sıfırdan web siteleri oluşturmayı öğreniyorum. Teknolojiye, biyomedikal mühendisliğine ve kendi projelerimi geliştirmek için HTML, CSS, JavaScript, Git ve GitHub'ın nasıl çalıştığını öğrenmeye ilgi duyuyorum.",
+
+                projects_button:
+                    "Projeleri gör →",
+
+                about_button:
+                    "Hakkımda",
+
+                about_number:
+                    "01 — HAKKIMDA",
+
+                about_title:
+                    "Biraz<br>hakkımda.",
+
+                about_description:
+                    "Las Palmas de Gran Canaria Üniversitesi'nde Biyomedikal Mühendisliği öğrencisiyim. Bu web sitesi öğrendiklerimi, projelerimi ve oluşturduğum şeyleri paylaşacağım alan olacak.",
+
+                projects_number:
+                    "02 — PROJELER",
+
+                projects_title:
+                    "Geliştirdiğim<br>şeyler.",
+
+                projects_description:
+                    "Yakında programlama, biyomedikal mühendisliği ve geliştireceğim diğer deneysel projelerimi burada bulabilirsiniz.",
+
+                contact_number:
+                    "03 — İLETİŞİM",
+
+                contact_title:
+                    "İletişime geçelim.",
+
+                contact_description:
+                    "Yakında sosyal medya hesaplarımı, GitHub, LinkedIn ve diğer iletişim yollarımı burada bulabilirsiniz."
+
+            }
+
+        };
+
+        /* =========================
+           SELECTOR
+        ========================= */
+
         const languageSelector =
             document.getElementById("language");
 
+        /* =========================
+           CAMBIAR IDIOMA
+        ========================= */
 
-        languageSelector.addEventListener("change", function () {
+        function changeLanguage(language) {
 
-            const language = this.value;
+            /* Comprobar que el idioma existe */
 
-            console.log(
-                "Idioma seleccionado:",
+            if (!translations[language]) {
+                language = "es";
+            }
+
+            /* Buscar todos los elementos con data-i18n */
+
+            const elements =
+                document.querySelectorAll("[data-i18n]");
+
+            /* Cambiar cada texto */
+
+            elements.forEach(element => {
+
+                const key =
+                    element.getAttribute("data-i18n");
+
+                if (translations[language][key]) {
+
+                    element.innerHTML =
+                        translations[language][key];
+
+                }
+
+            });
+
+            /* Cambiar el idioma del HTML */
+
+            document.documentElement.lang =
+                language;
+
+            /* Guardar idioma en el navegador */
+
+            localStorage.setItem(
+                "language",
                 language
             );
 
-            /*
-                Aquí posteriormente añadiremos
-                el sistema real de traducción.
-            */
+        }
 
-        });
+        /* =========================
+           CAMBIO MANUAL
+        ========================= */
+
+        languageSelector.addEventListener(
+            "change",
+            function () {
+
+                changeLanguage(
+                    this.value
+                );
+
+            }
+        );
+
+        /* =========================
+           IDIOMA GUARDADO
+        ========================= */
+
+        const savedLanguage =
+            localStorage.getItem("language");
+
+        if (
+            savedLanguage &&
+            translations[savedLanguage]
+        ) {
+
+            languageSelector.value =
+                savedLanguage;
+
+            changeLanguage(
+                savedLanguage
+            );
+
+        } else {
+
+            /* Primera visita: Español por defecto */
+
+            languageSelector.value =
+                "es";
+
+            changeLanguage("es");
+
+        }
 
     </script>
-
 
 </body>
 
 </html>
-```
